@@ -6,8 +6,8 @@ import PackageDescription
 let package = Package(
     name: "ESFoundation",
     products: [
-        .library(name: "ESFoundation", targets: ["ESDate", "ESArray", "ESString", "ESDispatchQueue", "ESNotification", "ESTime"]),
-        .library(name: "ESDate", targets: ["ESDate"]),
+        .library(name: "ESFoundation", targets: ["ESDate", "ESArray", "ESString", "ESDispatchQueue", "ESNotification", "ESTime", "ESCache"]),
+        .library(name: "ESDate", targets: ["ESDate", "ESCache"]),
         .library(name: "ESArray", targets: ["ESArray"]),
         .library(name: "ESString", targets: ["ESString"]),
         .library(name: "ESDispatchQueue", targets: ["ESDispatchQueue"]),
@@ -19,6 +19,7 @@ let package = Package(
 
     ],
     targets: [
+        .target(name: "ESCache", dependencies: [], path: "Sources/ESFoundation", sources: ["Cache"]),
         .target(name: "ESDate", dependencies: [], path: "Sources/ESFoundation", sources: ["Date"]),
         .target(name: "ESArray", dependencies: [], path: "Sources/ESFoundation", sources: ["Array"]),
         .target(name: "ESString", dependencies: [], path: "Sources/ESFoundation", sources: ["String"]),

@@ -6,13 +6,22 @@
 //
 
 import UIKit
+import ESArray
+import ESString
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let array = [1, 2, 2, 3, 5]
+        let newArray = array.enumerated { $0 > 3 }
+        print(array, newArray)
+        
+        let string = "originString"
+        print(string.md5)
     }
+    
+    
 
 
 }

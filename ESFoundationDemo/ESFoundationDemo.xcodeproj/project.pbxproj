@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		1A896C432590A67500757EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A896C412590A67500757EF0 /* Main.storyboard */; };
 		1A896C452590A67600757EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A896C442590A67600757EF0 /* Assets.xcassets */; };
 		1A896C482590A67600757EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A896C462590A67600757EF0 /* LaunchScreen.storyboard */; };
+		1A896C642590AA5E00757EF0 /* ESArray in Frameworks */ = {isa = PBXBuildFile; productRef = 1A896C632590AA5E00757EF0 /* ESArray */; };
+		1A896C6C2590AB4600757EF0 /* ESString in Frameworks */ = {isa = PBXBuildFile; productRef = 1A896C6B2590AB4600757EF0 /* ESString */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A896C642590AA5E00757EF0 /* ESArray in Frameworks */,
+				1A896C6C2590AB4600757EF0 /* ESString in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				1A896C3A2590A67500757EF0 /* ESFoundationDemo */,
 				1A896C392590A67500757EF0 /* Products */,
+				1A896C662590AA6C00757EF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +72,13 @@
 			path = ESFoundationDemo;
 			sourceTree = "<group>";
 		};
+		1A896C662590AA6C00757EF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +95,10 @@
 			dependencies = (
 			);
 			name = ESFoundationDemo;
+			packageProductDependencies = (
+				1A896C632590AA5E00757EF0 /* ESArray */,
+				1A896C6B2590AB4600757EF0 /* ESString */,
+			);
 			productName = ESFoundationDemo;
 			productReference = 1A896C382590A67500757EF0 /* ESFoundationDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 1A896C2F2590A67500757EF0;
+			packageReferences = (
+				1A896C622590AA5E00757EF0 /* XCRemoteSwiftPackageReference "ESFoundation" */,
+			);
 			productRefGroup = 1A896C392590A67500757EF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +360,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A896C622590AA5E00757EF0 /* XCRemoteSwiftPackageReference "ESFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KKLater/ESFoundation.git";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A896C632590AA5E00757EF0 /* ESArray */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A896C622590AA5E00757EF0 /* XCRemoteSwiftPackageReference "ESFoundation" */;
+			productName = ESArray;
+		};
+		1A896C6B2590AB4600757EF0 /* ESString */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A896C622590AA5E00757EF0 /* XCRemoteSwiftPackageReference "ESFoundation" */;
+			productName = ESString;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A896C302590A67500757EF0 /* Project object */;
 }
