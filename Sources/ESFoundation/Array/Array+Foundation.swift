@@ -253,6 +253,5 @@ public extension Array where Element: Equatable {
     mutating func removeDuplicates() {
         self = removeDuplicates { $0 }
     }
-
-
 }
+

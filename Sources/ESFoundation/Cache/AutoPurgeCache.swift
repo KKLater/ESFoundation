@@ -10,11 +10,10 @@ import UIKit
 /// 自动清理缓存
 ///
 /// 在收到系统内容警告时，会自动清理掉内存缓存
-public class AutoPurgeCache<String, ObjectType>: NSCache<AnyObject, AnyObject> where ObjectType : AnyObject {
+public class AutoPurgeCache<KeyType, ObjectType>: NSCache<AnyObject, AnyObject> where KeyType: AnyObject, ObjectType : AnyObject {
     
-    override init() {
+    public override init() {
         super.init()
-        
         addNotification()
     }
     
